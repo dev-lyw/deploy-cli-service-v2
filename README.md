@@ -81,7 +81,7 @@ module.exports = {
     webDir: '/usr/local/nginx/html', // 服务器部署路径（不可为空或'/'）
     bakDir: '/usr/local/nginx/backup', // 备份路径 (打包前备份之前部署目录 最终备份路径为 /usr/local/nginx/backup/html.zip)  // 批量上传部署（ssr项目）最终备份路径为 /usr/local/nginx/backup/backup_{时间戳}/{file/zipFile}
     maxBackupVersionCount: 3, //最多可存储的备份版本数, default 3
-    isRemoveRemoteFile: true, // 是否删除远程文件（默认true）
+    isRemoveRemoteFile: false, // 是否删除远程文件（默认true）
     isRemoveLocalFile: true, // 是否删除本地文件（默认true）
     isAll: true, // 是否选择项目下所有文件夹打包， 启用则(webDir, bakDir)字段失效,排除带.的（比如.git）以及node_modules文件夹
     exclude: ["README.md"], // isAll为true时有效, 指定不打包上传的文件（仅仅是文件，对文件夹不起作用）
@@ -105,7 +105,7 @@ module.exports = {
     webDir: '/usr/local/nginx/html', // 服务器部署路径（不可为空或'/'）
     bakDir: '/usr/local/nginx/backup', // 备份路径 (打包前备份之前部署目录 最终备份路径为 /usr/local/nginx/backup/html.zip)  // 批量上传部署（ssr项目）最终备份路径为 /usr/local/nginx/backup/backup_{时间戳}/{file/zipFile}
     maxBackupVersionCount: 3, //最多可存储的备份版本数, default 3
-    isRemoveRemoteFile: true, // 是否删除远程文件（默认true）
+    isRemoveRemoteFile: false, // 是否删除远程文件（默认true）
     isRemoveLocalFile: true, // 是否删除本地文件（默认true）
     isAll: true, // 是否选择项目下所有文件夹打包， 启用则(webDir, bakDir)字段失效,排除带.的（比如.git）以及node_modules文件夹
     exclude: ["README.md"], // isAll为true时有效, 指定不打包上传的文件（仅仅是文件，对文件夹不起作用）
@@ -129,7 +129,7 @@ module.exports = {
     webDir: '/usr/local/nginx/html', // 服务器部署路径（不可为空或'/'）
     bakDir: '/usr/local/nginx/backup', // 备份路径 (打包前备份之前部署目录 最终备份路径为 /usr/local/nginx/backup/html.zip) // 批量上传部署（ssr项目）最终备份路径为 /usr/local/nginx/backup/backup_{时间戳}/{file/zipFile}
     maxBackupVersionCount: 3, //最多可存储的备份版本数, default 3
-    isRemoveRemoteFile: true, // 是否删除远程文件（默认true）
+    isRemoveRemoteFile: false, // 是否删除远程文件（默认true）
     isRemoveLocalFile: true, // 是否删除本地文件（默认true）
     isAll: true, // 是否选择项目下所有文件夹打包， 启用则(webDir, bakDir)字段失效,排除带.的（比如.git）以及node_modules文件夹
     exclude: ["README.md"], // isAll为true时有效, 指定不打包上传的文件（仅仅是文件，对文件夹不起作用）
