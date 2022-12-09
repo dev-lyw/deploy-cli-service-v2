@@ -1,6 +1,6 @@
 {
   "name": "deploy-cli-service-v2",
-  "version": "1.3.23",
+  "version": "1.3.24",
   "description": "deploy tools",
   "main": "/lib/service.js",
   "bin": {
@@ -23,5 +23,16 @@
   "bugs": {
     "url": "https://github.com/dev-lyw/deploy-cli-service-v2/issues"
   },
-  "homepage": "https://github.com/dev-lyw/deploy-cli-service-v2#readme"
+  "homepage": "https://github.com/dev-lyw/deploy-cli-service-v2#readme",
+  "dependencies": {
+    "archiver": "^5.0.2",
+    "chalk": "^4.1.0",
+    "commander": "^6.1.0",
+    "dayjs": "^1.10.4",
+    "inquirer": "^7.3.3",
+    "minimist": "^1.2.5",
+    "node-ssh": "^11.0.0",
+    "ora": "^5.1.0",
+    "prettier": "^2.1.1"
+  }
 }
