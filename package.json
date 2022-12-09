@@ -1,14 +1,17 @@
 {
   "name": "deploy-cli-service-v2",
-  "version": "1.3.5",
+  "version": "1.3.7",
   "description": "ssh deploy and rollback tool",
   "main": "bin/deploy-cli-service.js",
   "bin": {
-    "deploy-cli-service-v2": "bin/deploy-cli-service.js"
+    "deploy-cli-service-v2": "./lib/bin/deploy-cli-service.js"
   },
   "directories": {
     "lib": "lib"
   },
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
