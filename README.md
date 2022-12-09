@@ -1,8 +1,11 @@
 # 来源
-本项目基于deploy-cli-service， csr部署，ssr部署(批量打包上传)， 指定版本回滚(暂支持本地化部署， 通过远程服务器部署暂不支持)， 远程部署，自启动服务, 
+fork from:https://github.com/fuchengwei/deploy-cli-service &  https://github.com/Yukixieyuya821/deploy-cli-service-v2
 
-感谢deploy-cli-service作者！！！
-# deploy-cli-yuki-service
+本项目基于 deploy-cli-service， csr 部署，ssr 部署(批量打包上传)， 指定版本回滚(暂支持本地化部署， 通过远程服务器部署暂不支持)， 远程部署，自启动服务, 
+
+感谢deploy-cli-service fuchengwei 作者,与 Yukixieyuya821。
+
+# deploy-cli-service-v2
 
 前端一键自动化部署脚手架服务，支持开发、测试、生产多环境配置。
 
@@ -10,39 +13,32 @@ csr部署，ssr部署(批量打包上传)，远程部署，可指定版本回滚
 
 支持批量打包Zip,批量上传，配置好后一键即可自动完成部署。
 
-### github
-
-[https://github.com/Yukixieyuya821/deploy-cli-yuki-service](https://github.com/Yukixieyuya821/deploy-cli-yuki-service)
-
-### npm
-
-[https://www.npmjs.com/package/deploy-cli-yuki-service](https://www.npmjs.com/package/deploy-cli-yuki-service)
 
 
 ## 1 安装
 
-全局安装 deploy-cli-yuki-service
+全局安装 deploy-cli-service-v2
 
 ```shell
-npm install deploy-cli-yuki-service -g
+npm install deploy-cli-service-v2 -g
 ```
 
-本地安装 deploy-cli-yuki-service
+本地安装 deploy-cli-service-v2
 
 ```shell
-npm install deploy-cli-yuki-service --save-dev
+npm install deploy-cli-service-v2 --save-dev
 ```
 
 查看版本，表示安装成功
 
 ```javascript
-deploy-cli-yuki-service -v
+deploy-cli-service-v2 -v
 ```
 
 注：本地安装的需要在调用前加 `npx`
 
 ```shell
-npx deploy-cli-yuki-service -v
+npx deploy-cli-service-v2 -v
 ```
 
 ### 2 使用（以下代码都以全局安装为例）
@@ -50,14 +46,14 @@ npx deploy-cli-yuki-service -v
 #### 2.1 查看帮助
 
 ```shell
-deploy-cli-yuki-service -h
+deploy-cli-service-v2 -h
 ```
 
 
 #### 2.2 初始化配置文件（在项目目录下）
 
 ```shell
-deploy-cli-yuki-service init # 或者使用简写 deploy-cli-yuki-service i
+deploy-cli-service-v2 init # 或者使用简写 deploy-cli-service-v2 i
 ```
 
 根据提示填写内容，会在项目根目录下生成 `deploy.config.js` 文件，初始化配置只会生成 `dev` (开发环境)、`test` (测试环境)、`prod` (生产环境) 三个配置，再有其他配置可参考模板自行配置。
@@ -153,7 +149,7 @@ module.exports = {
 注意：命令后面需要加 `--mode` 环境对象 （如：`--mode dev`）
 
 ```shell
-deploy-cli-yuki-service deploy --mode dev # 或者使用 deploy-cli-yuki-service d --mode dev
+deploy-cli-service-v2 deploy --mode dev # 或者使用 deploy-cli-service-v2 d --mode dev
 ```
 
 输入 `Y` 确认后即可开始自动部署
@@ -161,10 +157,10 @@ deploy-cli-yuki-service deploy --mode dev # 或者使用 deploy-cli-yuki-service
 
 #### 2.5 集群部署 （在项目目录下）
 
-注意：集群配置需要在 `deploy-cli-yuki-service` 中 配置 `cluster` 字段 （如：`cluster: ['dev', 'test', 'prod']`）
+注意：集群配置需要在 `deploy-cli-service-v2` 中 配置 `cluster` 字段 （如：`cluster: ['dev', 'test', 'prod']`）
 
 ```shell
-deploy-cli-yuki-service deploy # 或者使用 deploy-cli-yuki-service d
+deploy-cli-service-v2 deploy # 或者使用 deploy-cli-service-v2 d
 ```
 
 输入 `Y` 确认后即可开始自动部署
@@ -186,13 +182,13 @@ deploy-cli-yuki-service deploy # 或者使用 deploy-cli-yuki-service d
   "serve": "vue-cli-service serve",
   "build": "vue-cli-service build",
   "lint": "vue-cli-service lint",
-  "deploy": "deploy-cli-yuki-service deploy",
-  "deploy:dev": "deploy-cli-yuki-service deploy --mode dev",
-  "deploy:test": "deploy-cli-yuki-service deploy --mode test",
-  "deploy:prod": "deploy-cli-yuki-service deploy --mode prod",
-  "rollback:dev": "deploy-cli-yuki-service rollback --mode dev",
-  "rollback:test": "deploy-cli-yuki-service rollback --mode test",
-  "rollback:prod": "deploy-cli-yuki-service rollback --mode prod"
+  "deploy": "deploy-cli-service-v2 deploy",
+  "deploy:dev": "deploy-cli-service-v2 deploy --mode dev",
+  "deploy:test": "deploy-cli-service-v2 deploy --mode test",
+  "deploy:prod": "deploy-cli-service-v2 deploy --mode prod",
+  "rollback:dev": "deploy-cli-service-v2 rollback --mode dev",
+  "rollback:test": "deploy-cli-service-v2 rollback --mode test",
+  "rollback:prod": "deploy-cli-service-v2 rollback --mode prod"
 }
 ```
 
@@ -201,7 +197,3 @@ deploy-cli-yuki-service deploy # 或者使用 deploy-cli-yuki-service d
 ```shell
 npm run deploy:dev
 ```
-
-最后如果大家觉得还不错挺好用的话，麻烦给个 Star 😜😜😜。
-
-再次感谢deploy-cli-service作者！！！
