@@ -1,14 +1,12 @@
 {
   "name": "deploy-cli-service-v2",
-  "version": "1.3.9",
-  "description": "ssh deploy and rollback tool",
-  "main": "lib/lib/service.js",
+  "version": "1.3.22",
+  "description": "deploy tools",
+  "main": "/lib/service.js",
   "bin": {
-    "deploy-cli-service-v2": "./lib/bin/deploy-cli-service.js"
+    "deploy-cli-service-v2": "bin/deploy-cli-service.js"
   },
-  "files": [
-    "lib/"
-  ],
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,7 +16,7 @@
   },
   "keywords": [
     "deploy",
-    "rollback"
+    "tools"
   ],
   "author": "dev-lyw",
   "license": "MIT",
